@@ -5,11 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#0959C8">
-  <title>LMS Platforms | Consica Labs</title>
-  <meta name="description" content="Learning management at institutional scale. White-label LMS with analytics, assessments, and seamless integrations for schools and enterprises.">
+  <title>IMS Platforms | Consica Labs</title>
+  <meta name="description"
+    content="Learning management at institutional scale. White-label LMS with analytics, assessments, and seamless integrations for schools and enterprises.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -58,7 +61,7 @@
       document.documentElement.classList.add(theme);
     })();
   </script>
-  <script>window.CONSICA_BASE='../';window.CONSICA_PRODUCT_ID='lms';</script>
+  <script>window.CONSICA_BASE = '../'; window.CONSICA_PRODUCT_ID = 'lms';</script>
   <link rel="stylesheet" href="../shared/styles/base.css">
   <link rel="stylesheet" href="../shared/styles/animations.css">
   <link rel="stylesheet" href="../shared/styles/theme-overrides.css">
@@ -68,37 +71,47 @@
     .static-main {
       padding-top: var(--nav-height);
     }
+
     .static-main section {
       scroll-margin-top: calc(var(--nav-height) + 1rem);
     }
+
     @media (max-width: 1024px) {
       .static-main {
         padding-top: 3.5rem;
       }
+
       .static-main section {
         scroll-margin-top: 4rem;
       }
+
       .static-main .glass-panel {
         border-radius: 1rem;
       }
     }
+
     .scrollbar-hide {
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+
     .scrollbar-hide::-webkit-scrollbar {
       display: none;
     }
+
     .mobile-bottom-nav {
       box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.35);
     }
+
     #mobile-drawer aside {
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
     }
+
     .safe-top {
       padding-top: env(safe-area-inset-top, 0);
     }
+
     @media (hover: none) {
       .card-3d:hover {
         transform: none !important;
@@ -129,7 +142,8 @@
   <div id="app-root" class="relative z-10 min-h-screen">
     <!-- Navbar / Header -->
     <header class="fixed top-0 left-0 right-0 z-40 glass-nav safe-top">
-      <nav class="max-w-[1600px] mx-auto px-5 lg:px-8 h-14 lg:h-[var(--nav-height)] flex items-center justify-between" aria-label="Main navigation">
+      <nav class="max-w-[1600px] mx-auto px-5 lg:px-8 h-14 lg:h-[var(--nav-height)] flex items-center justify-between"
+        aria-label="Main navigation">
         <a href="../index.html" class="flex items-center gap-2.5">
           <span id="main-logo-trigger" class="flex items-center">
             <!-- White logo for dark mode -->
@@ -152,18 +166,26 @@
         </div>
         <div class="nav-actions flex items-center gap-3">
           <!-- Theme Toggle Button -->
-          <button type="button" class="theme-toggle-btn p-2 rounded-lg glass-panel text-theme-muted hover:text-theme transition-colors" aria-label="Toggle theme">
+          <button type="button"
+            class="theme-toggle-btn p-2 rounded-lg glass-panel text-theme-muted hover:text-theme transition-colors"
+            aria-label="Toggle theme">
             <svg class="w-5 h-5 theme-show-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
             </svg>
-            <svg class="w-5 h-5 theme-show-light" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+            <svg class="w-5 h-5 theme-show-light" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
           </button>
-          <a href="../index.html#contact" class="btn-primary magnetic-btn text-sm py-2.5 px-5 hidden sm:inline-flex">Contact</a>
-          <button type="button" id="mobile-menu-btn" class="p-2 rounded-lg glass-panel lg:hidden" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Open menu">
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M4 8h16M4 16h16"/>
+          <a href="../index.html#contact"
+            class="btn-primary magnetic-btn text-sm py-2.5 px-5 hidden sm:inline-flex">Contact</a>
+          <button type="button" id="mobile-menu-btn" class="p-2 rounded-lg glass-panel lg:hidden" aria-expanded="false"
+            aria-controls="mobile-drawer" aria-label="Open menu">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M4 8h16M4 16h16" />
             </svg>
           </button>
         </div>
@@ -176,9 +198,11 @@
     </div>
 
     <!-- Mobile Drawer menu -->
-    <div id="mobile-drawer" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300" aria-hidden="true" inert>
+    <div id="mobile-drawer" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300"
+      aria-hidden="true" inert>
       <div class="absolute inset-0 bg-black/60" id="drawer-backdrop"></div>
-      <aside class="absolute right-0 top-0 bottom-0 w-[min(100%,320px)] glass-panel border-l border-theme p-6 flex flex-col">
+      <aside
+        class="absolute right-0 top-0 bottom-0 w-[min(100%,320px)] glass-panel border-l border-theme p-6 flex flex-col">
         <div class="flex justify-between items-center mb-8">
           <span class="font-display font-semibold">Menu</span>
           <button type="button" id="mobile-menu-close" class="p-2" aria-label="Close menu">✕</button>
@@ -201,22 +225,39 @@
     </div>
 
     <!-- Quick Nav Bottom bar (Visible only on mobile/tablet viewports `< lg`) -->
-    <nav class="mobile-bottom-nav fixed bottom-0 left-0 right-0 z-40 glass-nav pb-safe lg:hidden" aria-label="Quick navigation">
+    <nav class="mobile-bottom-nav fixed bottom-0 left-0 right-0 z-40 glass-nav pb-safe lg:hidden"
+      aria-label="Quick navigation">
       <div class="flex justify-around items-center h-16 px-2">
-        <a href="../index.html#hero" class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 10.5L12 4l8 6.5V20H5v-9.5z"/></svg>
+        <a href="../index.html#hero"
+          class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
+            <path d="M4 10.5L12 4l8 6.5V20H5v-9.5z" />
+          </svg>
           <span class="text-[10px] font-medium">Home</span>
         </a>
-        <a href="../index.html#products" class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z"/></svg>
+        <a href="../index.html#products"
+          class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
+            <path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zM4 13h7v7H4v-7zm9 0h7v7h-7v-7z" />
+          </svg>
           <span class="text-[10px] font-medium">Products</span>
         </a>
-        <a href="../index.html#services" class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+        <a href="../index.html#services"
+          class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+          </svg>
           <span class="text-[10px] font-medium">Services</span>
         </a>
-        <a href="../index.html#contact" class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h16v12H4V6l8 7 8-7"/></svg>
+        <a href="../index.html#contact"
+          class="bottom-nav-item flex flex-col items-center gap-0.5 text-theme-faint hover:text-brand-300 transition-colors min-w-[64px] py-1">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            aria-hidden="true">
+            <path d="M4 6h16v12H4V6l8 7 8-7" />
+          </svg>
           <span class="text-[10px] font-medium">Contact</span>
         </a>
       </div>
@@ -225,16 +266,20 @@
     <!-- Main Content -->
     <main id="main-content" class="static-main">
       <article class="px-5 pt-12 pb-6 lg:px-8 lg:pt-24 lg:pb-16 max-w-[1600px] mx-auto">
-        <a href="../index.html#products" class="text-sm text-brand-300 hover:text-theme transition-colors inline-flex items-center gap-1 mb-5 lg:mb-8">← Back to ecosystem</a>
+        <a href="../index.html#products"
+          class="text-sm text-brand-300 hover:text-theme transition-colors inline-flex items-center gap-1 mb-5 lg:mb-8">←
+          Back to ecosystem</a>
         <p class="section-label">EdTech</p>
-        <h1 class="section-title text-3xl tracking-tight leading-tight mt-2.5 lg:text-5xl lg:mt-3">LMS Platforms</h1>
+        <h1 class="section-title text-3xl tracking-tight leading-tight mt-2.5 lg:text-5xl lg:mt-3">IMS Platforms</h1>
         <p class="mt-2.5 text-[15px] lg:mt-4 lg:text-xl text-brand-200">Learning management at institutional scale</p>
-        <p class="mt-3.5 text-[14px] leading-relaxed lg:mt-6 lg:text-lg text-theme-muted">White-label LMS with analytics, assessments, and seamless integrations for schools and enterprises.</p>
-        
+        <p class="mt-3.5 text-[14px] leading-relaxed lg:mt-6 lg:text-lg text-theme-muted">White-label IMS with
+          analytics, assessments, and seamless integrations for schools and enterprises.</p>
+
         <div class="mt-6 p-5 lg:mt-10 lg:p-8 glass-panel reveal">
           <h2 class="font-display font-semibold text-lg">Built for scale</h2>
           <p class="mt-3 text-theme-muted text-sm leading-relaxed">
-            LMS Platforms integrates seamlessly with the Consica Labs ecosystem — shared identity, unified analytics, and enterprise-grade security from day one.
+            IMS Platforms integrates seamlessly with the Consica Labs ecosystem — shared identity, unified analytics,
+            and enterprise-grade security from day one.
           </p>
           <div class="mt-6 flex flex-col gap-2.5 lg:mt-8 lg:flex-row lg:gap-4">
             <a href="../index.html#contact" class="btn-primary magnetic-btn text-center">Request a demo</a>
@@ -272,14 +317,15 @@
               <img src="../assets/images/logob.png" alt="Consica Labs" class="h-7 html-logo-dark">
               <span class="font-display font-bold text-xl tracking-tight uppercase">Consica Labs</span>
             </a>
-            <p class="mt-3 text-sm text-theme-muted max-w-sm">Software · EdTech · SaaS · Innovation Lab. Building trust through intelligent technology.</p>
+            <p class="mt-3 text-sm text-theme-muted max-w-sm">Software · EdTech · SaaS · Innovation Lab. Building trust
+              through intelligent technology.</p>
           </div>
           <div>
             <h4 class="text-xs font-semibold uppercase tracking-wider text-theme-faint mb-4">Products</h4>
             <ul class="space-y-2 text-sm text-theme-muted">
               <li><a href="academy.html" class="hover:text-theme transition-colors">Consica Academy</a></li>
               <li><a href="ai-systems.html" class="hover:text-theme transition-colors">AI Systems</a></li>
-              <li><a href="lms.html" class="hover:text-theme transition-colors">LMS Platforms</a></li>
+              <li><a href="lms.html" class="hover:text-theme transition-colors">IMS Platforms</a></li>
               <li><a href="school-systems.html" class="hover:text-theme transition-colors">School Systems</a></li>
               <li><a href="saas-tools.html" class="hover:text-theme transition-colors">SaaS Tools</a></li>
               <li><a href="enterprise.html" class="hover:text-theme transition-colors">Enterprise Software</a></li>
@@ -295,7 +341,8 @@
             </ul>
           </div>
         </div>
-        <div class="mt-12 pt-8 border-t border-theme flex flex-col gap-4 lg:flex-row lg:justify-between lg:items-center text-sm text-theme-faint">
+        <div
+          class="mt-12 pt-8 border-t border-theme flex flex-col gap-4 lg:flex-row lg:justify-between lg:items-center text-sm text-theme-faint">
           <p>© 2026 Consica Labs. All rights reserved.</p>
           <p>info@consicalabs.com</p>
         </div>
