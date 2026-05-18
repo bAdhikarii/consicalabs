@@ -149,9 +149,6 @@
       hideLoader();
       requestAnimationFrame(() => {
         if (window.ConsicaAnimations) ConsicaAnimations.init();
-        if (window.CONSICA_PRODUCT_ID && window.ConsicaProductPage?.initAutoScroll) {
-          window.ConsicaProductPage.initAutoScroll();
-        }
       });
     } catch (err) {
       console.error('[Consica] Device load failed:', err);

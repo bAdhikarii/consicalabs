@@ -147,47 +147,6 @@
     }
   }
 
-  // Auto-scroll loop for Product details page (e.g. for premium motion identity)
-  function initProductAutoScroll() {
-    if (!window.CONSICA_PRODUCT_ID) return;
-    
-    let lastInteraction = 0;
-    let direction = 1; 
-    const speed = 0.45; 
-
-    function handleInteraction() {
-      lastInteraction = Date.now();
-    }
-
-    window.addEventListener('wheel', handleInteraction, { passive: true });
-    window.addEventListener('touchmove', handleInteraction, { passive: true });
-    window.addEventListener('mousedown', handleInteraction, { passive: true });
-    window.addEventListener('keydown', handleInteraction, { passive: true });
-
-    function step() {
-      const now = Date.now();
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-      if (maxScroll > 0 && now - lastInteraction > 4000) {
-        let current = window.scrollY;
-        
-        if (direction === 1 && current >= maxScroll - 2) {
-          direction = -1;
-        } else if (direction === -1 && current <= 2) {
-          direction = 1;
-        }
-
-        window.scrollBy(0, direction * speed);
-      }
-
-      requestAnimationFrame(step);
-    }
-
-    setTimeout(() => {
-      requestAnimationFrame(step);
-    }, 1500);
-  }
-
   // Bootstrap Static Shell
   function bootstrap() {
     initTheme();
@@ -204,7 +163,6 @@
       });
     }
 
-    initProductAutoScroll();
     hidePageLoader();
   }
 

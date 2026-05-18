@@ -138,43 +138,4 @@ window.ConsicaProductPage = {
     </article>`;
   },
 
-  initAutoScroll() {
-    let lastInteraction = 0;
-    let direction = 1; // 1 = down, -1 = up
-    const speed = 0.45; // Smooth scroll delta per frame
-
-    function handleInteraction() {
-      lastInteraction = Date.now();
-    }
-
-    // Register listeners for manual scroll/interaction
-    window.addEventListener('wheel', handleInteraction, { passive: true });
-    window.addEventListener('touchmove', handleInteraction, { passive: true });
-    window.addEventListener('mousedown', handleInteraction, { passive: true });
-    window.addEventListener('keydown', handleInteraction, { passive: true });
-
-    function step() {
-      const now = Date.now();
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-
-      if (maxScroll > 0 && now - lastInteraction > 4000) {
-        let current = window.scrollY;
-        
-        if (direction === 1 && current >= maxScroll - 2) {
-          direction = -1;
-        } else if (direction === -1 && current <= 2) {
-          direction = 1;
-        }
-
-        window.scrollBy(0, direction * speed);
-      }
-
-      requestAnimationFrame(step);
-    }
-
-    // Start smooth scrolling loop after loading transitions finish
-    setTimeout(() => {
-      requestAnimationFrame(step);
-    }, 1500);
-  }
 };
